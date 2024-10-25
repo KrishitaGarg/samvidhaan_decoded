@@ -1,0 +1,385 @@
+.constitution-decoder-container {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #4a403a;
+}
+
+.first {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.text-image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.title-img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+}
+
+.simplified-guide-text-container {
+  flex: 1;
+  margin-left: 150px;
+}
+
+.simplified-guide-text {
+  font-size: 1.4rem;
+  color: #57383b;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 250px;
+  font-weight: 700;
+}
+
+.light-theme .explore-btn {
+  background-color: #57383b;
+  color: white;
+}
+
+.light-theme .explore-btn:hover {
+  border: 2px solid #57383b !important;
+  background-color: transparent !important;
+  color: black !important;
+}
+
+.light-theme .play-btn {
+  color: black !important;
+  background-color: white !important;
+  border: 2px solid #57383b;
+}
+
+.light-theme .play-btn:hover {
+  background-color: #57383b !important;
+  color: white !important;
+}
+
+.dark-theme .explore-btn {
+  background-color: #d68d44 !important;
+  color: white !important;
+}
+
+.dark-theme .explore-btn:hover {
+  color: white !important;
+  background-color: transparent !important;
+  border: 2px solid #d68d44 !important;
+}
+
+.dark-theme .play-btn {
+  color: white !important;
+  background-color: transparent !important;
+  border: 2px solid #d68d44 !important;
+}
+
+.dark-theme .play-btn:hover {
+  background-color: #d68d44 !important;
+  color: white !important;
+}
+
+.main-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.main-img {
+  max-width: 500px;
+  height: auto;
+}
+
+.preamble-section {
+  margin-top: 20px;
+  padding: 50px;
+  padding-bottom: 20px;
+  background: #332829;
+}
+
+.preamble-container {
+  padding: 20px;
+  width: 80%;
+  max-width: 490px;
+  margin: 0 auto;
+  line-height: 23px;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #36230d;
+}
+
+.preamble-div {
+  background-image: url("../../assets/preamble_bg.jpg");
+  background-size: 800px 800px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 300px;
+  min-height: 80vh;
+  text-align: center;
+  padding-bottom: 150px;
+  border-radius: 2rem;
+}
+
+.second-p {
+  color: white;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.wine {
+  color: #deab5f;
+}
+
+.second-p h1 {
+  font-weight: 600;
+  font-size: 35px;
+  color: white;
+  margin: 0;
+}
+
+.second-p h2 {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.second-p h4 {
+  font-size: 18px;
+}
+
+.word {
+  color: #36230d;
+  display: inline-block;
+}
+
+.word:hover {
+  cursor: pointer;
+  color: #36230dcd;
+}
+
+.meaning-box {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border: 2px solid #deab5f;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  font-size: 14px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.meaning-box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.meaning-box.left::after {
+  top: 50%;
+  left: 100%;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #000;
+  transform: translateY(-50%);
+}
+
+.meaning-box.right::after {
+  top: 50%;
+  right: 100%;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #000 transparent transparent;
+  transform: translateY(-50%);
+}
+
+.preamble-section .content {
+  background: #332829;
+  border: 2px solid #fffbf5;
+}
+
+.constitution-section {
+  padding: 40px;
+  border-radius: 20px;
+  min-height: 80vh;
+  text-align: center;
+  padding-bottom: 50px;
+  border-radius: 2rem;
+}
+
+.constitution-content {
+  text-align: center;
+  color: #000;
+}
+
+.constitution-content h1 {
+  color: #000;
+}
+
+.light-theme {
+  color: #4a403a;
+  background-color: #fffbf5;
+}
+
+.light-theme .meaning-box {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  color: white;
+  background-color: #332829;
+}
+
+.dark-theme .simplified-guide-text {
+  color: white;
+}
+
+.dark-theme .meaning-box {
+  background-color: #444;
+  color: white;
+}
+
+.dark-theme .preamble-section {
+  background: #332829;
+}
+
+.dark-theme .preamble-container {
+  color: black;
+}
+
+.react-flow__node {
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 800px) {
+  .text-image-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .simplified-guide-text-container {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .main-image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .title-img,
+  .main-img {
+    max-width: 100%;
+  }
+
+  .btn {
+    width: 200px;
+    font-size: 0.9rem;
+  }
+
+  .preamble-section {
+    padding: 20px;
+  }
+
+  .preamble-container {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .preamble-div {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background-size: cover;
+  }
+
+  .second-p h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .simplified-guide-text {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 15px;
+    font-size: 0.8rem;
+    width: 180px;
+  }
+
+  .second-p h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  .simplified-guide-text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 0.7rem;
+    width: 150px;
+  }
+
+  .second-p h1 {
+    font-size: 20px;
+  }
+
+  .preamble-div {
+    padding-top: 100px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .simplified-guide-text {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 0.6rem;
+    width: 120px;
+  }
+
+  .second-p h1 {
+    font-size: 18px;
+  }
+
+  .preamble-div {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+}

@@ -1,0 +1,239 @@
+/* General Body Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.article-details .summary {
+  font-size: 18px !important;
+}
+
+.content {
+  background-color: transparent;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .content {
+  color: #57383b;
+}
+
+.dark-theme .content {
+  color: white;
+}
+
+.title h1 {
+  padding: 15px;
+  background: #57383b;
+  border-radius: 10px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fffbf5;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.title-section h1 {
+  padding: 15px;
+  background: #d68d44;
+  border-radius: 10px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 26px;
+  color: #fffbf5;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.title-section h2{
+  padding: 15px;
+  margin: 0;
+  font-weight: 550;
+  font-size: 22px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.title-section p {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.light-theme .title-section p {
+  color: #57383b;
+}
+
+.dark-theme .title-section p {
+  color: white;
+}
+
+.light-theme .title-section h2 {
+  color: #57383b;
+}
+
+.dark-theme .title-section h2 {
+  color: white;
+}
+
+/* Articles Section */
+.articles-section {
+  margin-top: 20px;
+}
+
+.article-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d68d44;
+}
+
+.article-title {
+  padding: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: color 0.3s, background 0.3s;
+}
+
+.article-title:hover {
+  color: #d68e81;
+  background: rgba(215, 141, 68, 0.1);
+}
+
+.article-summary {
+  padding-left: 50px;
+}
+
+.loading-message,
+.error-message {
+  color: #f78b28;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+.list li {
+  font-weight: 600;
+  margin: 10px;
+  color: white;
+}
+
+.highlight {
+  color: #f78b28;
+  font-weight: bold;
+}
+
+.description h1 {
+  font-weight: 700;
+  font-size: 27px;
+  padding-left: 60px;
+}
+
+.light-theme .description {
+  color: #57383b;
+}
+
+.dark-theme .description h1,
+.dark-theme .description h2 {
+  color: white !important;
+}
+
+.light-theme .article-title {
+  color: #57383b !important;
+}
+
+.dark-theme .article-title {
+  color: #f78b28 !important;
+  background: #f9d8b8;
+}
+
+.description h2 {
+  font-weight: 500;
+  margin: 60px;
+  font-size: 24px;
+}
+
+.description p {
+  margin: 60px;
+  line-height: 1.6;
+}
+
+.highlight-role {
+  color: #f78b28;
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 15px;
+}
+
+.search-input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #57383b !important;
+  width: 25% !important;
+  height: 45px;
+  margin-top: 10px;
+}
+
+.go-button {
+  padding: 5px;
+  background: #57383b;
+  color: #fffbf5;
+  border: none;
+  border-radius: 10px;
+  margin-top: 9px !important;
+  cursor: pointer;
+  width: 10%;
+  height: 45px;
+}
+
+.go-button:hover {
+  background-color: #a76972;
+}
+
+.chatbot-link {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f78b28;
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.chatbot-link:hover {
+  background-color: rgb(44, 13, 23);
+}
+
+.chatbot-logo {
+  height: 30px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.chatbot-text {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}

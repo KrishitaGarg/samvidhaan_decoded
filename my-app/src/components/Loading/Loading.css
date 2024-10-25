@@ -1,0 +1,78 @@
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100svh;
+    background: #FFFBF5;
+    z-index: 100;
+
+}
+
+.loading-image {
+    width: 80%;
+    height: auto;
+    aspect-ratio: 1/1;
+    max-width: 360px;
+    max-height: 360px;
+
+    @media (min-width: 500px) {
+        width: 60%;
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+
+.loading-cloud-1 {
+    position: fixed;
+    width: 20%;
+    max-width: 200px;
+    top: 30px;
+    left: 60px;
+    z-index: 100000;
+}
+
+.loading-cloud-2 {
+    position: fixed;
+    width: 20%;
+    max-width: 200px;
+    top: 30px;
+    right: 60px;
+    z-index: 100000;
+}
+
+.loading-cloud-3 {
+    position: fixed;
+    width: 20%;
+    max-width: 200px;
+    top: 40px;
+    left: 60px;
+    z-index: 100000;
+}
+
+.loading-cloud {
+    position: fixed;
+    z-index: 100000;
+}
+
+.main-Image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cloud-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    max-width: 150px;
+    max-height: 150px;
+
+    @media (min-width: 768px) {
+        max-width: 220px;
+        max-height: 220px;
+    }
+}

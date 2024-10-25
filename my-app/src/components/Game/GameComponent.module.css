@@ -1,0 +1,123 @@
+.container {
+  background-image: url("../../assets/game_bg.png") !important;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  opacity: 1;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.titleImage {
+  width: 30%;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: -50px;
+}
+
+.startButton {
+  font-size: 20px;
+  margin-top: 0;
+  cursor: pointer;
+  background: #57383B;
+  border: 5px solid greenyellow;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  width: auto;
+  display: block;
+}
+
+.instructionButton {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #57383B;
+  border: 5px solid greenyellow;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.instructionBox {
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  width: 450px;
+  max-height: 500px;
+  background-color: #57383B;
+  color: greenyellow;
+  border: 2px solid greenyellow;
+  border-radius: 10px;
+  padding: 20px;
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.instructionsHeader {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  text-align: left;
+  color: greenyellow;
+  text-decoration: underline;
+}
+
+.instructionsText {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  color: white !important;
+  padding: 5px;
+}
+
+.infoIcon {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instructionsHeader {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-align: left;
+  text-decoration: underline;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.readAloudButton {
+  font-size: 30px;
+  width: 40px;
+  padding: 0;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.readAloudButton:hover {
+  font-size: 35px;
+  background: none;
+}

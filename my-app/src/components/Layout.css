@@ -1,0 +1,248 @@
+:root {
+  --background-color: #fffbf5;
+  --text-color: black;
+  --header-background: #fffbf5;
+  --button-background: none;
+  --button-hover-background: #f7e7ca;
+  --button-hover-color: rgb(253, 163, 93);
+}
+
+[data-theme="dark"] {
+  --background-color: #413233;
+  --text-color: white;
+  --header-background: #332829;
+  --button-background: none;
+  --button-hover-background: #977272;
+  --button-hover-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--background-color);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 5px 15px;
+  background: var(--header-background);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.name {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.name:hover {
+  color: var(--button-hover-color);
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.header-btn {
+  color: var(--text-color);
+  background: var(--button-background);
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  font-style: normal;
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: var(--button-hover-background);
+  color: var(--button-hover-color);
+}
+
+.sticky-logo-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: #f7e7ca;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 5px;
+}
+
+.sticky-logo-link {
+  display: block;
+}
+
+.sticky-logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+.sticky-text {
+  color: black;
+  font-weight: 600;
+  margin-right: 10px;
+  position: relative;
+  padding: 10px;
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  background: black;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-button:hover {
+  color: #ff0000;
+  background-color: #977272;
+}
+
+.button_color_change {
+  color: #d68d44;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .header-buttons {
+    gap: 10px;
+  }
+
+  .header-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-buttons {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .header-btn {
+    font-size: 0.85rem;
+  }
+
+  .sticky-logo-container {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1rem;
+  }
+
+  .header-btn {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .sticky-logo {
+    height: 40px;
+  }
+}
+
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-btn {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  border-radius: 5px;
+  padding: 2px;
+  display: none;
+  background-color: var(--button-background) !important;
+  border: 2px solid #ccc;
+}
+.profile-btn:hover .profile-dropdown {
+  display: block;
+}
+.profile-dropdown-item {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  padding: 5px 10px;
+  margin: 8px 0;
+  color: #f7e7ca;
+}
+
+.profile-dropdown-item:hover {
+  background-color: var(--button-hover-background);
+  color: var(--button-hover-color);
+}

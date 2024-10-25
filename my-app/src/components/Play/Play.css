@@ -1,0 +1,73 @@
+.play {
+  background-image: url("../../assets/play_bg.png");
+  height: 91vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-container {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.play-container img {
+  width: 40%;
+}
+
+.game-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 75px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.game-button {
+  background-color: rgb(51, 40, 41);
+  color: transparent;
+  border-radius: 15px;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s, border 0.2s;
+  width: 350px;
+}
+
+.game-button img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+
+.game-button:hover {
+  background-color: transparent;
+}
+
+.game-button:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .play-container img {
+    width: 80%;
+  }
+
+  .game-button {
+    width: 90%;
+  }
+
+  .game-buttons {
+    grid-template-columns: 1fr;
+  }
+}
