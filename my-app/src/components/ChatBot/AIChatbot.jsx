@@ -7,12 +7,13 @@ import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 import { ThreeDots } from "react-loader-spinner";
-
+import speakerIcon from "../../assets/speaker.png"
 const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { theme } = useTheme();
+  const [isReadAloud, setIsReadAloud] = useState(false);
 
   const placeholders = [
     "Please enter your question regarding the Constitution.",
@@ -158,6 +159,10 @@ const AIChatbot = () => {
     }
   };
 
+  const handleToggleReadAloud = () => {
+    setIsReadAloud((prev) => !prev);
+  };
+
   return (
     <div className={`${theme}-theme`}>
       <div className="ai-chatbot-section">
@@ -167,6 +172,19 @@ const AIChatbot = () => {
           <div className="chatbot-header">
             <img src={botLogo} alt="bot logo" className="message-logo" />
             Nyaya<span className="highlight-text">.AI</span>
+            {/* Dummy Read Aloud button Speaker*/}
+            <button
+              className="speaker-icon-button"
+              title="Read Aloud"
+              // Add functionality for read aloud here later if needed
+            >
+              <img
+                src={speakerIcon}
+                alt="speaker icon"
+                className="speaker-icon"
+                style={{ width: "24px", height: "24px" }}
+              />
+            </button>
           </div>
 
           <div className="chatbot-messages">

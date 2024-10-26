@@ -192,3 +192,28 @@
 .highlight-text {
   color: #d68d44;
 }
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 16px;
+}
+
+.speaker-icon-button {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.speaker-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
