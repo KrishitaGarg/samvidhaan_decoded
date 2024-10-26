@@ -9,11 +9,14 @@ import { useAuth } from "./AuthContex.jsx";
 import { auth } from "./firebase.js";
 import { FaUserAlt } from "react-icons/fa";
 import Loading from "./Loading/Loading.jsx";
+import Whatsapp from "../assets/whatsapp.png";
 
 const Layout = ({ children }) => {
   const [activeButton, setActiveButton] = useState("Home");
-  const [showText, setShowText] = useState(true);
+  const [showWhatsAppText, setShowWhatsAppText] = useState(true);
+  const [showLogoText, setShowLogoText] = useState(true);
   const location = useLocation();
+  const phoneNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
 
   const showStickyLogo =
     location.pathname === "/" || location.pathname === "/about";
@@ -23,12 +26,11 @@ const Layout = ({ children }) => {
   };
 
   const handleLogoClick = () => {
-    setActiveButton("Home"); 
+    setActiveButton("Home");
   };
 
-  const handleCloseText = () => {
-    setShowText(false);
-  };
+  const handleCloseWhatsAppText = () => setShowWhatsAppText(false);
+  const handleCloseLogoText = () => setShowLogoText(false);
 
   const { userLoggedIn, currentUser } = useAuth();
 
@@ -122,24 +124,33 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       {showStickyLogo && (
-        <div className="sticky-logo-container">
-          {showText && (
-            <span className="sticky-text">
-              Say hi to <span className="coffee">Nyaya.AI</span>
-              <span className="close-button" onClick={handleCloseText}>
-                &times;
-              </span>
-            </span>
-          )}
-          <Link
-            to="/chatbot"
-            className={`sticky-logo-link ${
-              activeButton === "Nyaya.AI" ? "button_color_change" : ""
-            }`}
-            onClick={() => handleButtonClick("Nyaya.AI")}
-          >
-            <img src={logo} alt="Logo" className="sticky-logo" />
-          </Link>
+        <div className="sticky-container">
+          {/* WhatsApp Message Section */}
+          <div className="whatsapp-container">
+            <a
+              href={`https://wa.me/${phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-button"
+            >
+              <img src={Whatsapp} alt="WhatsApp" className="whatsapp-icon" />
+              <span className="whatsapp-text">Say hi to Nyaya.OnGo</span>
+            </a>
+          </div>
+
+          {/* Nyaya.AI Message Section */}
+          <div className="nyaya-logo-container">
+            <Link
+              to="/chatbot"
+              className={`sticky-logo-link ${
+                activeButton === "Nyaya.AI" ? "button_color_change" : ""
+              }`}
+              onClick={() => handleButtonClick("Nyaya.AI")}
+            >
+              <img src={logo} alt="Nyaya Logo" className="sticky-logo" />
+              <span className="nyaya-text">Say hi to Nyaya.AI</span>
+            </Link>
+          </div>
         </div>
       )}
     </div>

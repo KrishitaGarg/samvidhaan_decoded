@@ -84,59 +84,65 @@ nav {
   color: var(--button-hover-color);
 }
 
-.sticky-logo-container {
+
+.sticky-container {
   position: fixed;
   bottom: 10px;
   right: 10px;
   display: flex;
-  align-items: center;
-  border-radius: 5px;
-  background: #f7e7ca;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
   z-index: 1000;
+}
+
+.whatsapp-container,
+.nyaya-logo-container {
+  display: flex;
+  align-items: center;
+  background: #f7e7ca;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   padding: 5px;
+  transition: background 0.3s;
 }
 
-.sticky-logo-link {
-  display: block;
+.whatsapp-container:hover,
+.nyaya-logo-container:hover {
+  background: #e7d2a4;
 }
 
-.sticky-logo {
-  height: 50px;
-  width: auto;
-  cursor: pointer;
+.whatsapp-container .whatsapp-text,
+.nyaya-logo-container .nyaya-text {
+  display: none;
+}
+
+.whatsapp-container:hover .whatsapp-text,
+.nyaya-logo-container:hover .nyaya-text {
+  display: inline;
+  margin-left: 5px; 
 }
 
 .sticky-text {
   color: black;
   font-weight: 600;
   margin-right: 10px;
-  position: relative;
   padding: 10px;
 }
 
-.close-button {
-  width: 24px;
-  height: 24px;
-  font-size: 16px;
-  background: black;
-  border: 1px solid white;
-  border-radius: 50%;
-  color: white;
+.whatsapp-icon,
+.sticky-logo {
+  height: 40px;
+  width: auto;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: transform 0.3s;
 }
 
-.close-button:hover {
-  color: #ff0000;
-  background-color: #977272;
+.whatsapp-icon:hover,
+.sticky-logo:hover {
+  transform: scale(1.1);
 }
+
 
 .button_color_change {
   color: #d68d44;
