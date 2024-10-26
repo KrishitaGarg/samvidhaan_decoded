@@ -7,13 +7,15 @@ import sendIcon from "../../assets/send.svg";
 import { auth } from "../firebase";
 import { useTheme } from "../ThemeToggle/ThemeToggle.jsx";
 import { ThreeDots } from "react-loader-spinner";
-import speakerIcon from "../../assets/speaker.png"
+import speakerIcon from "../../assets/speaker.png";
+
 const AIChatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { theme } = useTheme();
   const [isReadAloud, setIsReadAloud] = useState(false);
+  const [isHindi, setIsHindi] = useState(false); // Toggle state for language
 
   const placeholders = [
     "Please enter your question regarding the Constitution.",
@@ -34,9 +36,7 @@ const AIChatbot = () => {
   ];
 
   const [placeholder, setPlaceholder] = useState("");
-
   const backendUrl = process.env.REACT_APP_BACKEND_API_URL;
-
   const messagesEndRef = useRef(null);
 
   const getAuthToken = async () => {
@@ -123,7 +123,11 @@ const AIChatbot = () => {
 
     try {
       const token = await getAuthToken();
-      const response = await fetch(`${backendUrl}/message/get-ai-reply/`, {
+      const endpoint = isHindi
+        ? `${backendUrl}/message/get-hindi-ai-reply/`
+        : `${backendUrl}/message/get-ai-reply/`;
+
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -163,6 +167,10 @@ const AIChatbot = () => {
     setIsReadAloud((prev) => !prev);
   };
 
+  const handleToggleLanguage = () => {
+    setIsHindi((prev) => !prev);
+  };
+
   return (
     <div className={`${theme}-theme`}>
       <div className="ai-chatbot-section">
@@ -172,11 +180,11 @@ const AIChatbot = () => {
           <div className="chatbot-header">
             <img src={botLogo} alt="bot logo" className="message-logo" />
             Nyaya<span className="highlight-text">.AI</span>
-            {/* Dummy Read Aloud button Speaker*/}
+            {/* Read Aloud button */}
             <button
               className="speaker-icon-button"
               title="Read Aloud"
-              // Add functionality for read aloud here later if needed
+              // Add functionality for read aloud
             >
               <img
                 src={speakerIcon}
@@ -184,6 +192,10 @@ const AIChatbot = () => {
                 className="speaker-icon"
                 style={{ width: "24px", height: "24px" }}
               />
+            </button>
+            {/* Language Toggle Button */}
+            <button className="language-toggle" onClick={handleToggleLanguage}>
+              {isHindi ? "En" : "हि"}
             </button>
           </div>
 

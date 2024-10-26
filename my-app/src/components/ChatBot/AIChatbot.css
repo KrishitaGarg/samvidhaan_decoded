@@ -217,3 +217,27 @@
   height: 24px;
   margin-left: 8px;
 }
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #57383B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.language-toggle:hover {
+  background-color: #5c4a4b;
+}
+
+.language-toggle.active {
+  background-color: #ff6f61;
+}
