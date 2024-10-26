@@ -29,6 +29,7 @@ There are very interesting, intellectually provoking activities designed solely 
 - **Live Deployment:** [View Deployment](https://samvidhan-decoded.vercel.app/)
 - **Source Code:** [GitHub Repository](https://github.com/KrishitaGarg/samvidhaan_decoded/)
 - **Backend Repo** [Backend Repository](https://github.com/atishayj2202/brainwave-backend)
+- **Whatsapp Bot** [Whatsapp Chat Link](https://wa.me/919266207907) (Send a high message on this)
 
 ```bash
 git clone https://github.com/KrishitaGarg/samvidhaan_decoded/
